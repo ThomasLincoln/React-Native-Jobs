@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { RAPID_API_KEY } from "@env";
-const rapidApiKey = RAPID_API_KEY;
+
+import { API_KEY } from '@env'
+const rapidApiKey = process.env.API_KEY;
 
 const useFetch = (endpoint, query) => {
+  console.log(rapidApiKey)
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -43,3 +45,5 @@ const useFetch = (endpoint, query) => {
   }
   return { data, isLoading, error, refetech};
 };
+
+export default useFetch;
