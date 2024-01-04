@@ -40,14 +40,14 @@ const Home = () => {
             padding: SIZES.medium
           }}
         >
-          <Welcome 
-           searchTerm = {searchTerm}
-           setSearchTerm = {setSearchTerm}
-           handleClick = {() => {
-            if(searchTerm) {
-              router.push(`/search/${searchTerm}`)
-            }
-           }}
+         <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`)
+              }
+            }}
           />
 
           <Popularjobs />
