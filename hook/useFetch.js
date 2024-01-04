@@ -5,7 +5,6 @@ import { API_KEY } from '@env'
 const rapidApiKey = process.env.API_KEY;
 
 const useFetch = (endpoint, query) => {
-  console.log(rapidApiKey)
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
